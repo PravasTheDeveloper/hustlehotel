@@ -1,23 +1,13 @@
 import React from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
+import HotelSelectOption from './HotelSelectOption';
+import CarSelectOption from './CarSelectOption';
 
 function HomePageContent() {
 
-    const [adultNumber, setadultNumber] = useState(0)
-    const [childrenNumber, setchildrenNumber] = useState(0)
+    const [selectServices, setselectServices] = useState(1)
 
-    if (adultNumber > 4) {
-        alert(`Max Members Reched`);
-        setadultNumber(4);
-    } else if(childrenNumber > 2){
-        alert(`Max Members Reched`);
-        setchildrenNumber(2);
-    }else if (adultNumber < 0) {
-        setadultNumber(0);
-    }else if(childrenNumber < 0){
-        setchildrenNumber(0);
-    }
     return (
         <>
             <div className='Home__Page__Content flex justify-center items-center container mx-auto p-10 ' >
@@ -50,73 +40,19 @@ function HomePageContent() {
                                 <div>
                                     <h1 className='text-xl font-bold mb-6'>Search Room</h1>
                                 </div>
-                                <div className='border border-slate-300 w-full rounded-2xl overflow-hidden'>
-                                    <div className='flex justify-between'>
-                                        <div className=' border-r border-slate-300 w-2/4 h-max'>
-                                            <div className='p-5 border-b border-slate-300'>
-                                                <h1 className='text-xs text-slate-400'>Check-In</h1>
-                                                <input type="date" className='w-full border-b border-slate-300 outline-none text-base' />
-                                            </div>
-                                            <div className='p-5 border-b border-slate-300'>
-                                                <h1 className='text-xs text-slate-400'>Room</h1>
-                                                <select name="cars" id="cars" className='outline-none p-0'>
-                                                    <option value="volvo">1</option>
-                                                    <option value="saab">2</option>
-                                                    <option value="opel">3</option>
-                                                    <option value="audi">4</option>
-                                                </select>
-                                            </div>
-                                            <div className='p-5 border-b border-slate-300 flex'>
-                                                <div className='flex-1'>
-                                                    <h1 className='text-xs text-slate-400'>Adult</h1>
-                                                    <div className='text-xl'>
-                                                        {adultNumber}
-                                                    </div>
-                                                </div>
-                                                <div className=''>
-                                                    <div className='bg-slate-300 flex justify-center items-center text-2xl mb-2 cursor-pointer' onClick={() => { setadultNumber(adultNumber + 1) }}>+</div>
-                                                    <div className='px-2 text-2xl bg-slate-300 cursor-pointer' onClick={() => { setadultNumber(adultNumber - 1) }}>-</div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div className='w-2/4'>
-
-                                            <div className='p-5 border-b border-slate-300'>
-                                                <h1 className='text-xs text-slate-400'>Check-Out</h1>
-                                                <input type="date" className='w-full border-b border-slate-300 outline-none' />
-                                            </div>
-                                            <div className='p-5 border-b border-slate-300'>
-                                                <h1 className='text-xs text-slate-400'>Room Type</h1>
-                                                <select name="cars" id="cars" className='outline-none p-0 text-sm'>
-                                                    <option value="economy">ECONOMY</option>
-                                                    <option value="business">BUSINESS</option>
-                                                    <option value="standard">STANDARD</option>
-                                                    <option value="luxury">LUXURY</option>
-                                                </select>
-                                            </div>
-                                            <div className='p-5 border-b border-slate-300 flex'>
-                                                <div className='flex-1'>
-                                                    <h1 className='text-xs text-slate-400'>Children</h1>
-                                                    <div className='text-xl'>
-                                                        {childrenNumber}
-                                                    </div>
-                                                </div>
-                                                <div className=''>
-                                                    <div className='bg-slate-300 flex justify-center items-center text-2xl mb-2 cursor-pointer' onClick={() => { setchildrenNumber(childrenNumber + 1) }}>+</div>
-                                                    <div className='px-2 text-2xl bg-slate-300 cursor-pointer' onClick={() => { setchildrenNumber(childrenNumber - 1) }}>-</div>
-                                                </div>
-
-                                            </div>
-                                        </div>
+                                <div className='flex justify-around mb-5 text-xl'>
+                                    <div className={selectServices === 1?"text-cyan-600 border-b-2 border-cyan-600 cursor-pointer":"cursor-pointer"} onClick={() => {setselectServices(1)}}>
+                                        <i class="fa-solid fa-hotel"></i> HOTELS
                                     </div>
-                                    <div>
-                                        <button className='bg-cyan-600 w-full py-3 text-xl text-white'>
-                                            SEARCH
-                                        </button>
+                                    <div className={selectServices === 2?"text-cyan-600 border-b-2 border-cyan-600  cursor-pointer":"cursor-pointer"} onClick={() => {setselectServices(2)}}>
+                                        <i class="fa-solid fa-car"></i> CARS
                                     </div>
                                 </div>
-
+                                {selectServices === 1?
+                                    <HotelSelectOption />
+                                    :
+                                    <CarSelectOption />
+                                }
                             </div>
                         </div>
                         <div className='w-1/2 flex flex-col items-end justify-around h-full p-10 box-border text-white bg-blue-60'>

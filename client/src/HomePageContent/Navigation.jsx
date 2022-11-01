@@ -15,9 +15,9 @@ function Navigation() {
                             <ul className='flex'>
                                 <li className='mx-5'>Home</li>
                                 <li className='mx-5'>About</li>
-                                <li className='mx-5'>Services</li>
-                                <li className='mx-5'>Hotel</li>
-                                <li className='mx-5'>Contacts</li>
+                                <li className='mx-5'>Hotels</li>
+                                <li className='mx-5'>Cars</li>
+                                <li className='mx-5'>Tour</li>
                             </ul>
                         </div>
                         <div className='h-full flex items-center'>

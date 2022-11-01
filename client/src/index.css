@@ -74,3 +74,7 @@ code {
 .footer__icons i{
   width: 40px;
 }
+
+.person__Table__css{
+  top: -6000px;
+}

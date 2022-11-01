@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/fre
 function FooterPenel() {
     return (
         <>
-            <div className='footer__penel w-screen bg-slate-900 h-full'>
+            <div className='footer__penel bg-slate-900 h-full'>
                 <div className='container mx-auto text-white py-16 h-full'>
                     <div className='md:flex justify-between h-full'>
                         <div className='flex flex-col items-center md:items-start justify-between'>

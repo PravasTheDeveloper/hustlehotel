@@ -9,8 +9,8 @@ function ContactDirectly() {
                     <span className='font-light border-b-2 border-cyan-600'>If Contact</span> Us Directly
                 </h1>
                 <div className='md:flex justify-center items-center'>
-                    <div className=''>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0806013254773!2d90.40624741541471!3d23.744504994917587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b88bfd0133c5%3A0xfde0a96bf5fecf99!2sStamford%20University%20Bangladesh!5e0!3m2!1sen!2sbd!4v1666886999077!5m2!1sen!2sbd" className='w-full' />
+                    <div className='flex-1'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0806013254773!2d90.40624741541471!3d23.744504994917587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b88bfd0133c5%3A0xfde0a96bf5fecf99!2sStamford%20University%20Bangladesh!5e0!3m2!1sen!2sbd!4v1666886999077!5m2!1sen!2sbd" height={500} className='w-5/6' />
                     </div>
                     <div className='flex-1'>
                         <div className='text-2xl font-light text-slate-500'>
