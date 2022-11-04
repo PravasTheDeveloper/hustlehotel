@@ -37,9 +37,9 @@ function HomePageContent() {
                     <div className='lg:flex h-full'>
                         <div className='lg:w-1/2 h-full flex items-center justify-center bg-green-70'>
                             <div className=' bg-white w-4/5 p-10 rounded-xl shadow-lg'>
-                                <div>
+                                {/* <div>
                                     <h1 className='text-xl font-bold mb-6'>Search Room</h1>
-                                </div>
+                                </div> */}
                                 <div className='flex justify-around mb-5 text-xl'>
                                     <div className={selectServices === 1?"text-cyan-600 border-b-2 border-cyan-600 cursor-pointer":"cursor-pointer"} onClick={() => {setselectServices(1)}}>
                                         <i class="fa-solid fa-hotel"></i> HOTELS
