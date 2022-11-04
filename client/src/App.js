@@ -1,23 +1,20 @@
-import BestHotels from './BestHotels/BestHotels';
 import './App.css';
-import Home from './HomePageContent/Home';
-import AboutUsSection from './AboutUsSection/AboutUsSection';
-import ServicesSection from './ServicesSection/ServicesSection';
-import ConnectWithUs from './ConnectWithUs/ConnectWithUs';
-import ContactDirectly from './ContactDirectly/ContactDirectly';
-import FooterPenel from './FooterPenel/FooterPenel';
+import { Route, Routes } from 'react-router-dom';
+import About from './About';
+import SignIn from './SignIn';
+import Home from './Home';
 
 
 function App() {
   return (
     <>
-      <Home />
-      <BestHotels />
-      <AboutUsSection />
-      <ServicesSection />
-      <ConnectWithUs />
-      <ContactDirectly />
-      <FooterPenel />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="signin" element={<SignIn />} />
+        </Routes>
+      </div>
     </>
   );
 }

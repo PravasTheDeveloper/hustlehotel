@@ -29,7 +29,7 @@ function CarSelectOption() {
         <>
             <div className='border border-slate-300 w-full rounded-2xl'>
                 <div className='p-5 border-b border-slate-300 cursor-pointer'>
-                    <h1 className='text-xs text-slate-400'>Location</h1>
+                    <h1 className='text-xs text-slate-400'>Journey Date</h1>
                     <input type="text" className='border-b outline-none border-slate-500' />
                 </div>
                 <div className='flex justify-between'>

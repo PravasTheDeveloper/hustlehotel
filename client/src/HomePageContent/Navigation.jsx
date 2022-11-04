@@ -1,6 +1,7 @@
 import React from 'react'
 // import LogoImage from '../../public/Logo-Designs.png';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom'
 
 function Navigation() {
     return (
@@ -13,8 +14,8 @@ function Navigation() {
                         </div>
                         <div className=''>
                             <ul className='flex'>
-                                <li className='mx-5'>Home</li>
-                                <li className='mx-5'>About</li>
+                                <Link to="/"  className='mx-5'>Home</Link>
+                                <Link to="about" className='mx-5'>About</Link>
                                 <li className='mx-5'>Hotels</li>
                                 <li className='mx-5'>Cars</li>
                                 <li className='mx-5'>Tour</li>
@@ -25,7 +26,7 @@ function Navigation() {
                                 <MagnifyingGlassIcon className='w-8' />
                             </div>
                             <div className='bg-cyan-600 h-full flex items-center px-5'>
-                                Sign In
+                                <Link to="signin">Sign In</Link>
                             </div>
                         </div>
                     </div>
