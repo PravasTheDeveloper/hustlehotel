@@ -13,7 +13,6 @@ function Home() {
         <>
             <Homepage />
             <BestHotels />
-            <AboutUsSection />
             <ServicesSection />
             <ConnectWithUs />
             <ContactDirectly />

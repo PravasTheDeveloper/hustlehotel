@@ -1,8 +1,13 @@
 import React from 'react'
+import AboutUsSection from './AboutUsSection/AboutUsSection'
+import Navigation from './HomePageContent/Navigation'
 
 function About() {
   return (
-    <div>About</div>
+    <>
+      <Navigation />
+      <AboutUsSection />
+    </>
   )
 }
 
